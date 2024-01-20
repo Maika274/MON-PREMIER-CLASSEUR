@@ -42,8 +42,10 @@ function Preci()
   E=Norme(i-x0);
   n=1;
   while (E>10^(-12))
-  Y=Jacobi(A,B,X0,N);
-  E=Norme(Y[:,N+1]-XT);
-  N=N+1;
+    P=Dichotomie(f(x),x0,n)
+    E=Norme(P[:,n+1]-x0);
+  n=n+1;
 end
-print("Pour X0=(0,0,0), il faut $(N-1) itérations pour obtenir une erreur inférieure à 10^(-12).\n");
+print("Pour $i, il faut $(n-1) itérations pour obtenir une erreur inférieure à 10^(-12).\n");
+
+  
