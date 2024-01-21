@@ -48,4 +48,14 @@ function Preci()
 end
 print("Pour $i, il faut $(n-1) itérations pour obtenir une erreur inférieure à 10^(-12).\n");
 
+  #Question 3. b)
+
+  function Temps
+     T=0;
+    for n=1:n
+        T=T+@elapsed(Preci());
+    end
+    print("Il faut $T secondes afin d'obtenir une telle précision. \n")
+end
+
   
