@@ -7,3 +7,8 @@ def Newton(f,derivee_f,x0,n):
     return pas
     return x
   
+def f(x):
+  x=x.^2 .+ 2*x -3
+  return f(x)
+
+    
