@@ -41,8 +41,22 @@ print("Pour $i, il faut $(n-1) itérations pour obtenir une erreur inférieure �
 
   #Question 3. b)
 
-  function Temps
+function Temps
      T=0;
     for n=1:n
         T=T+@elapsed(Preci());
     end
+    print("Il faut $T secondes afin d'obtenir une telle précision. \n")
+end
+
+  
+#Question 4
+
+  function g(x)     #création de la nouvelle fonction
+    x=x.^2 .-2
+    return g(x)
+  end
+
+  #Représentation graphique de l'évolution de l'erreur
+  plot(E,n, xaxis=(0:0,0001:3), yaxis=(1:1:n), title="Evolution de l'erreur en fonction du nombre d'itération", titlefont=font(14),lw=3,aspect_ratio=:equal)
+  
