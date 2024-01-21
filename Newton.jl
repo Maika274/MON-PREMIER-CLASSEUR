@@ -12,10 +12,6 @@ function Newton(f,derivee_f,x0,n)
         #Question 3
 
 function f(x)  #Fonstion utilisée pour la question 3
-  print("Saisir a \n")
-  a=parse(Float64,redline())
-  print("Saisir b \n")
-  b=parse(Float64,redline())
   x=x.^2 .+ 2*x -3
   return f(x)
 end
@@ -33,7 +29,7 @@ function Preci()
   E=Norme(i-x0);
   n=1;
   while (E>10^(-12))
-    P=Dichotomie(f(x),x0,n)
+    P=Newton(f,derivee_f,x0,n)
     E=Norme(P[:,n+1]-x0);
   n=n+1;
 end
