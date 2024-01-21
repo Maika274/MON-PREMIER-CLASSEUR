@@ -48,5 +48,7 @@ print("Pour $i, il faut $(n-1) itérations pour obtenir une erreur inférieure �
     x=x.^2 .-2
     return g(x)
 
-plot
+plt.plot(E,n)
+plt.title("Evolution de l'erreur en fonction du nombre d'iteration")
+plt.show()
 
